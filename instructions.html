@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>1-to-1 Памятка</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --white:#FFFFFF;
+    --blue:#DCEEFF;
+    --blue-light:#EEF7FF;
+    --gray:#F5F7FA;
+    --accent:#4F8EF7;
+    --text:#1E293B;
+    --danger:#FFE8E8;
+
+    --radius:16px;
+
+    --shadow:
+        0 4px 20px rgba(15,23,42,.05),
+        0 1px 3px rgba(15,23,42,.04);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#edf2f7;
+    color:var(--text);
+    padding:40px;
+}
+
+.page{
+    width:210mm;
+    min-height:297mm;
+    margin:0 auto 40px;
+    background:#fff;
+    padding:40px;
+    border-radius:24px;
+    box-shadow:0 10px 40px rgba(0,0,0,.08);
+}
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+    margin-bottom:32px;
+}
+
+.hero-left{
+    flex:1;
+}
+
+.hero h1{
+    font-size:56px;
+    font-weight:800;
+    line-height:1;
+    margin-bottom:12px;
+}
+
+.subtitle{
+    font-size:20px;
+    color:#475569;
+    margin-bottom:20px;
+}
+
+.badge{
+    display:inline-block;
+    background:var(--blue);
+    padding:12px 18px;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.illustration{
+    width:240px;
+    height:180px;
+    background:linear-gradient(
+        135deg,
+        var(--blue),
+        var(--blue-light)
+    );
+    border-radius:24px;
+    position:relative;
+}
+
+.illustration:before{
+    content:"👩‍💼";
+    position:absolute;
+    font-size:64px;
+    left:40px;
+    top:45px;
+}
+
+.illustration:after{
+    content:"👨‍💻";
+    position:absolute;
+    font-size:64px;
+    right:40px;
+    top:45px;
+}
+
+.section-title{
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:24px;
+}
+
+.grid-2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.grid-4{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-bottom:24px;
+}
+
+.card{
+    background:var(--gray);
+    border-radius:var(--radius);
+    padding:24px;
+    box-shadow:var(--shadow);
+}
+
+.card-icon{
+    font-size:32px;
+    margin-bottom:14px;
+}
+
+.card h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#64748B;
+    line-height:1.6;
+}
+
+.highlight{
+    background:var(--blue);
+    border-radius:var(--radius);
+    padding:20px;
+    text-align:center;
+    font-weight:700;
+    margin-bottom:40px;
+}
+
+.principles{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    margin-bottom:40px;
+}
+
+.principle{
+    text-align:center;
+    background:var(--gray);
+    padding:20px;
+    border-radius:16px;
+}
+
+.principle span{
+    display:block;
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.list-card ul{
+    margin-top:14px;
+    list-style:none;
+}
+
+.list-card li{
+    margin-bottom:12px;
+    color:#475569;
+}
+
+.list-card li:before{
+    content:"✓";
+    color:var(--accent);
+    font-weight:700;
+    margin-right:8px;
+}
+
+.start-box{
+    margin-top:30px;
+    background:var(--blue-light);
+    border-radius:24px;
+    padding:28px;
+}
+
+.start-box h3{
+    margin-bottom:16px;
+    font-size:24px;
+}
+
+.questions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:16px;
+}
+
+.small-badge{
+    display:inline-block;
+    margin-top:20px;
+    background:#fff;
+    padding:10px 14px;
+    border-radius:999px;
+    font-size:13px;
+}
+
+.timeline{
+    position:relative;
+    padding-left:60px;
+    margin-top:30px;
+    margin-bottom:40px;
+}
+
+.timeline:before{
+    content:"";
+    position:absolute;
+    left:22px;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:#dbeafe;
+}
+
+.step{
+    position:relative;
+    margin-bottom:24px;
+    background:var(--gray);
+    padding:18px 22px;
+    border-radius:16px;
+}
+
+.step:before{
+    content:"";
+    position:absolute;
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    background:var(--accent);
+    left:-46px;
+    top:24px;
+}
+
+.step h4{
+    margin-bottom:6px;
+}
+
+.feedback-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-top:30px;
+}
+
+.blue-card{
+    background:var(--blue);
+}
+
+.red-card{
+    margin-top:32px;
+    background:var(--danger);
+    border-radius:16px;
+    padding:24px;
+}
+
+.warning-list{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:12px;
+    margin-top:18px;
+    text-align:center;
+}
+
+.warning-item{
+    background:white;
+    border-radius:12px;
+    padding:12px;
+    font-size:14px;
+}
+
+@media print{
+
+    body{
+        background:white;
+        padding:0;
+    }
+
+    .page{
+        box-shadow:none;
+        margin:0;
+        border-radius:0;
+        page-break-after:always;
+    }
+
+}
+.grid-3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.question-card ul{
+    margin-top:12px;
+    padding-left:18px;
+}
+
+.question-card li{
+    margin-bottom:10px;
+    color:#475569;
+    line-height:1.5;
+}
+
+.feedback-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    margin-top:32px;
+}
+
+.feedback-card{
+    padding:28px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.feedback-card h3{
+    margin-bottom:18px;
+    font-size:22px;
+}
+
+.feedback-card p{
+    line-height:1.7;
+    color:#475569;
+}
+
+.feedback-card strong{
+    color:var(--text);
+}
+
+.feedback-blue{
+    background:var(--blue);
+}
+
+.feedback-gray{
+    background:var(--gray);
+}
+
+.feedback-item{
+    margin-bottom:18px;
+}
+
+.arrow{
+    text-align:center;
+    margin:8px 0;
+    font-size:20px;
+    color:var(--accent);
+}
+
+.warning-box{
+    margin-top:36px;
+    background:#FFEAEA;
+    border-radius:20px;
+    padding:28px;
+}
+
+.warning-box h3{
+    margin-bottom:20px;
+}
+
+.warning-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:12px;
+}
+
+.warning-item{
+    background:white;
+    padding:16px;
+    border-radius:14px;
+    text-align:center;
+    font-size:14px;
+    line-height:1.4;
+}
+
+.print-btn{
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    border:none;
+    background:#4F8EF7;
+    color:white;
+    font-family:Inter,sans-serif;
+    font-size:15px;
+    font-weight:600;
+    padding:14px 22px;
+    border-radius:999px;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(79,142,247,.25);
+}
+
+.print-btn:hover{
+    transform:translateY(-2px);
+}
+
+@media print{
+    .print-btn{
+        display:none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- СТРАНИЦА 1 -->
+
+<section class="page">
+
+<div class="hero">
+
+<div class="hero-left">
+
+<h1>1-to-1</h1>
+
+<div class="subtitle">
+Памятка для сотрудников и руководителей
+</div>
+
+<div class="badge">
+Регулярный диалог для развития, обратной связи и поддержки
+</div>
+
+</div>
+
+<div class="illustration"></div>
+
+</div>
+
+<h2 class="section-title">
+Зачем нужны встречи 1-to-1?
+</h2>
+
+<div class="grid-4">
+
+<div class="card">
+<div class="card-icon">🎯</div>
+<h3>Синхронизация ожиданий</h3>
+<p>Понимание целей, приоритетов и зон ответственности.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">💬</div>
+<h3>Обратная связь</h3>
+<p>Получение и предоставление обратной связи для развития.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🚀</div>
+<h3>Развитие сотрудника</h3>
+<p>Обсуждение навыков, карьерных целей и точек роста.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🤝</div>
+<h3>Поддержка и решение проблем</h3>
+<p>Выявление сложностей и поиск решений.</p>
+</div>
+
+</div>
+
+<div class="highlight">
+1-to-1 — это диалог, а не отчет по задачам.
+</div>
+
+<!-- ДАЛЬШЕ ИДУТ ПРИНЦИПЫ, ПОДГОТОВКА,
+БЛОК "КАК НАЧАТЬ ВСТРЕЧУ?", ВТОРАЯ СТРАНИЦА,
+ТАЙМЛАЙН И ОБРАТНАЯ СВЯЗЬ -->
+
+<h2 class="section-title">
+Основные принципы
+</h2>
+
+<div class="principles">
+
+    <div class="principle">
+        <span>🤝</span>
+        Инициатором может быть любая сторона
+    </div>
+
+    <div class="principle">
+        <span>💬</span>
+        Вопросы задают обе стороны
+    </div>
+
+    <div class="principle">
+        <span>🔒</span>
+        Доверие и открытость
+    </div>
+
+    <div class="principle">
+        <span>🎯</span>
+        Фокус на решениях и развитии
+    </div>
+
+</div>
+
+<h2 class="section-title">
+Подготовка к встрече
+</h2>
+
+<div class="grid-2">
+
+    <div class="card list-card">
+
+        <h3>👤 Сотруднику</h3>
+
+        <ul>
+            <li>Подготовить вопросы</li>
+            <li>Заполнить повестку</li>
+            <li>Подумать о сложностях</li>
+            <li>Подготовить запрос на обратную связь</li>
+        </ul>
+
+    </div>
+
+    <div class="card list-card">
+
+        <h3>👔 Руководителю</h3>
+
+        <ul>
+            <li>Ознакомиться с повесткой</li>
+            <li>Подготовить обратную связь</li>
+            <li>Проверить статус договоренностей</li>
+            <li>Продумать поддержку сотрудника</li>
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="start-box">
+
+    <h3>
+        💡 Как начать встречу?
+    </h3>
+
+    <p style="
+        color:#475569;
+        margin-bottom:20px;
+        line-height:1.7;
+    ">
+        Первые 3–5 минут посвятите сотруднику.
+    </p>
+
+    <div class="questions">
+
+        <div>• Как дела?</div>
+        <div>• Как настроение?</div>
+
+        <div>• Комфортна ли текущая нагрузка?</div>
+        <div>• Есть ли сложности?</div>
+
+        <div>• Нужна ли поддержка?</div>
+
+    </div>
+
+    <div class="small-badge">
+        Такой старт помогает создать доверительную атмосферу.
+    </div>
+
+</div>
+
+</section>
+
+<section class="page">
+
+<h1 style="
+font-size:42px;
+font-weight:800;
+margin-bottom:30px;
+">
+Структура встречи
+</h1>
+
+<div class="timeline">
+
+    <div class="step">
+        <h4>🟢 Состояние сотрудника</h4>
+        <p>Самочувствие, нагрузка, сложности.</p>
+    </div>
+
+    <div class="step">
+        <h4>🟡 Предыдущие договоренности</h4>
+        <p>Что выполнено? Что требует поддержки?</p>
+    </div>
+
+    <div class="step">
+        <h4>🔵 Текущие вопросы</h4>
+        <p>Обсуждение тем из повестки.</p>
+    </div>
+
+    <div class="step">
+        <h4>🟣 Развитие и точки роста</h4>
+        <p>Навыки, обучение, карьерные цели.</p>
+    </div>
+
+    <div class="step">
+        <h4>🟠 Обратная связь</h4>
+        <p>От руководителя и сотрудника.</p>
+    </div>
+
+    <div class="step">
+        <h4>✅ План действий</h4>
+        <p>Конкретные договоренности и сроки.</p>
+    </div>
+
+</div>
+<h2 class="section-title">
+Полезные вопросы
+</h2>
+
+<div class="grid-3">
+
+    <div class="card question-card">
+
+        <h3>💼 О работе</h3>
+
+        <ul>
+            <li>Что сейчас получается лучше всего?</li>
+            <li>Что вызывает сложности?</li>
+            <li>Какая помощь нужна?</li>
+        </ul>
+
+    </div>
+
+    <div class="card question-card">
+
+        <h3>🚀 О развитии</h3>
+
+        <ul>
+            <li>Какие навыки хочется развивать?</li>
+            <li>Какие задачи наиболее интересны?</li>
+        </ul>
+
+    </div>
+
+    <div class="card question-card">
+
+        <h3>❤️ О вовлеченности</h3>
+
+        <ul>
+            <li>Что мотивирует?</li>
+            <li>Что можно улучшить?</li>
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="feedback-grid">
+
+    <div class="feedback-card feedback-blue">
+
+        <h3>
+            Как давать обратную связь
+        </h3>
+
+        <p style="margin-bottom:18px;">
+            Модель Start – Stop – Continue
+        </p>
+
+        <div class="feedback-item">
+            <strong>START</strong><br>
+            Что стоит начать делать?
+        </div>
+
+        <div class="feedback-item">
+            <strong>STOP</strong><br>
+            Что стоит прекратить делать?
+        </div>
+
+        <div class="feedback-item">
+            <strong>CONTINUE</strong><br>
+            Что получается хорошо и стоит продолжать?
+        </div>
+
+    </div>
+
+    <div class="feedback-card feedback-gray">
+
+        <h3>
+            Как получать обратную связь
+        </h3>
+
+        <p style="margin-bottom:18px;">
+            Модель 4A Feedback
+        </p>
+
+        <div>
+            <strong>Aim to Assist</strong><br>
+            Слушай с целью улучшиться
+        </div>
+
+        <div class="arrow">↓</div>
+
+        <div>
+            <strong>Appreciate</strong><br>
+            Поблагодари
+        </div>
+
+        <div class="arrow">↓</div>
+
+        <div>
+            <strong>Accept or Discard</strong><br>
+            Оцени полезность рекомендации
+        </div>
+
+        <div class="arrow">↓</div>
+
+        <div>
+            <strong>Adapt</strong><br>
+            Если полезно — внедри
+        </div>
+
+    </div>
+
+</div>
+
+<div class="warning-box">
+
+    <h3>
+        ⚠ Чего стоит избегать
+    </h3>
+
+    <div class="warning-grid">
+
+        <div class="warning-item">
+            ❌<br>
+            Отчет вместо диалога
+        </div>
+
+        <div class="warning-item">
+            ❌<br>
+            Только критика
+        </div>
+
+        <div class="warning-item">
+            ❌<br>
+            Отвлечения на телефон
+        </div>
+
+        <div class="warning-item">
+            ❌<br>
+            Отмена встреч без причины
+        </div>
+
+        <div class="warning-item">
+            ❌<br>
+            Игнорирование договоренностей
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<button class="print-btn" onclick="window.print()">
+    Скачать PDF
+</button>
+
+<script>
+console.log("1-to-1 guide loaded");
+</script>
+
+</body>
+</html>
+
