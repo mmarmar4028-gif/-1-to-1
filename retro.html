@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ретроспективная встреча — памятка</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#FFFFFF;
+  --blue:#DCEEFF;
+  --blue-light:#EEF7FF;
+  --gray:#F5F7FA;
+  --accent:#4F8EF7;
+  --text:#1E293B;
+  --shadow:0 6px 18px rgba(15, 23, 42, 0.06);
+  --radius:16px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, sans-serif;
+  color:var(--text);
+  background:#eee;
+}
+
+.page{
+  width:210mm;
+  height:297mm;
+  padding:18mm;
+  background:var(--bg);
+  margin:20px auto;
+  box-shadow:var(--shadow);
+  position:relative;
+}
+
+h1{
+  font-size:32px;
+  margin:0;
+  letter-spacing:-0.5px;
+}
+
+h2{
+  font-size:18px;
+  font-weight:500;
+  color:#475569;
+  margin-top:6px;
+}
+
+.badge{
+  display:inline-block;
+  background:var(--blue);
+  padding:8px 12px;
+  border-radius:999px;
+  font-size:12px;
+  margin-top:14px;
+}
+
+.grid-2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.card{
+  background:var(--gray);
+  padding:14px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+}
+
+.card.white{
+  background:#fff;
+}
+
+.card.blue{
+  background:var(--blue-light);
+}
+
+.card.accent{
+  background:var(--blue);
+}
+
+.big-card{
+  padding:18px;
+  border-radius:var(--radius);
+  background:var(--blue);
+  box-shadow:var(--shadow);
+}
+
+.section-title{
+  font-size:14px;
+  font-weight:600;
+  margin:18px 0 10px;
+  color:#334155;
+}
+
+.icon{
+  font-size:18px;
+}
+
+.flex{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+}
+
+.hero svg{
+  width:140px;
+  height:140px;
+}
+
+.timeline{
+  border-left:2px solid var(--blue);
+  padding-left:18px;
+}
+
+.step{
+  margin-bottom:16px;
+  position:relative;
+}
+
+.step::before{
+  content:"";
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  position:absolute;
+  left:-26px;
+  top:4px;
+  background:var(--accent);
+}
+
+.warning{
+  background:#ffe8e8;
+  padding:14px;
+  border-radius:var(--radius);
+  border-left:4px solid #ff5a5a;
+  font-size:13px;
+}
+
+.small{
+  font-size:12px;
+  color:#64748b;
+}
+
+ul{
+  padding-left:16px;
+  margin:6px 0 0;
+}
+
+hr{
+  border:none;
+  border-top:1px solid #e2e8f0;
+  margin:16px 0;
+}
+
+/* PRINT */
+@media print{
+  body{background:#fff}
+  .page{margin:0; box-shadow:none; page-break-after:always;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= PAGE 1 ================= -->
+<div class="page">
+
+  <div class="hero">
+    <div>
+      <h1>Ретроспективная встреча</h1>
+      <h2>Памятка для сотрудников и руководителей</h2>
+      <div class="badge">Анализируем прошлое, чтобы работать эффективнее в будущем</div>
+    </div>
+
+    <!-- Flat illustration -->
+    <svg viewBox="0 0 200 200">
+      <rect x="20" y="60" width="160" height="80" rx="12" fill="#EEF7FF"/>
+      <circle cx="60" cy="100" r="10" fill="#4F8EF7"/>
+      <circle cx="100" cy="100" r="10" fill="#4F8EF7"/>
+      <circle cx="140" cy="100" r="10" fill="#4F8EF7"/>
+      <rect x="40" y="120" width="120" height="10" rx="5" fill="#DCEEFF"/>
+    </svg>
+  </div>
+
+  <div class="section-title">Что такое ретроспективная встреча?</div>
+  <div class="card white">
+    Ретроспектива — это встреча команды для анализа прошедшего периода, проекта или этапа работы.<br><br>
+    Цель встречи — понять, что помогало достигать результатов, что мешало работе и какие улучшения стоит внедрить в будущем.
+  </div>
+
+  <div class="section-title">Зачем проводить ретроспективы?</div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="icon">📈 Повышение эффективности</div>
+      <div class="small">Находим возможности для улучшения процессов и результатов.</div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🚧 Выявление проблем</div>
+      <div class="small">Определяем причины сложностей и повторяющихся препятствий.</div>
+    </div>
+
+    <div class="card">
+      <div class="icon">💡 Поиск решений</div>
+      <div class="small">Формируем идеи и инициативы по улучшению работы.</div>
+    </div>
+
+    <div class="card">
+      <div class="icon">🤝 Развитие команды</div>
+      <div class="small">Усиливаем взаимодействие и обмен опытом внутри команды.</div>
+    </div>
+  </div>
+
+  <div class="section-title">Основной принцип ретроспективы</div>
+  <div class="big-card">
+    <b>Фокус на процессах, а не на людях</b><br><br>
+    Мы обсуждаем процессы и систему, а не личности.<br><br>
+
+    ❌ Почему ты допустил ошибку?<br>
+    ✅ Что в процессе позволило этой ошибке произойти?<br><br>
+
+    <div class="card white">
+      Цель ретроспективы — улучшать систему работы, а не искать виноватых.
+    </div>
+  </div>
+
+  <div class="flex" style="margin-top:12px;">
+    <div class="card white" style="flex:1;">
+      <b>👥 Инициатор встречи</b>
+      <ul>
+        <li>Руководитель</li>
+        <li>Команда</li>
+        <li>Фасилитатор</li>
+      </ul>
+    </div>
+
+    <div class="card white" style="flex:1;">
+      <b>📅 Периодичность</b>
+      <ul>
+        <li>Ежемесячно</li>
+        <li>Ежеквартально</li>
+        <li>После проекта</li>
+        <li>После изменений</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card blue" style="margin-top:12px;">
+    <b>⏱ Формат встречи</b><br><br>
+    60–90 минут (команда)<br>
+    до 120 минут (крупные проекты)<br><br>
+
+    <b>🤝 Атмосфера</b>
+    <ul>
+      <li>Открытость</li>
+      <li>Уважение</li>
+      <li>Конструктив</li>
+      <li>Участие всех</li>
+      <li>Фокус на решениях</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ================= PAGE 2 ================= -->
+<div class="page">
+
+  <h1>Этапы ретроспективы</h1>
+
+  <div class="timeline">
+
+    <div class="step">
+      <b>🟢 Вспоминаем период</b><br>
+      Что происходило? Какие события были значимыми?
+    </div>
+
+    <div class="step">
+      <b>🟡 Собираем наблюдения</b><br>
+      Что получилось хорошо? Какие сложности возникли?
+    </div>
+
+    <div class="step">
+      <b>🔵 Анализируем причины</b><br>
+      Какие процессы повлияли на результат?
+    </div>
+
+    <div class="step">
+      <b>🟣 Определяем приоритеты</b><br>
+      Какие проблемы наиболее критичны?
+    </div>
+
+    <div class="step">
+      <b>🟠 Формируем решения</b><br>
+      Что изменить, прекратить, усилить?
+    </div>
+
+    <div class="step">
+      <b>✅ Фиксируем действия</b><br>
+      Ответственные, сроки, шаги
+    </div>
+
+  </div>
+
+  <div class="section-title">Полезные вопросы</div>
+
+  <div class="grid-2">
+    <div class="card">
+      <b>👍 Успехи</b>
+      <ul>
+        <li>Что сработало лучше всего?</li>
+        <li>Чем мы можем гордиться?</li>
+        <li>Что сохранить?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <b>🚧 Сложности</b>
+      <ul>
+        <li>Что замедляло работу?</li>
+        <li>Какие проблемы повторялись?</li>
+        <li>Что мешало?</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <b>🚀 Улучшения</b>
+      <ul>
+        <li>Что изменить?</li>
+        <li>Что ускорит работу?</li>
+        <li>Что даст эффект?</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="big-card" style="margin-top:12px;">
+    Хорошая ретроспектива заканчивается не списком проблем, а конкретными действиями по их устранению.
+  </div>
+
+  <div class="warning" style="margin-top:12px;">
+    <b>⚠ Чего стоит избегать</b><br><br>
+    ❌ Поиск виноватых<br>
+    ❌ Переход на личности<br>
+    ❌ Критика без решений<br>
+    ❌ Обсуждение без действий<br>
+    ❌ Игнор договорённостей
+  </div>
+
+</div>
+
+</body>
+</html>
